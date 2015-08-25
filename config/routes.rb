@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 		root to: 'users/sessions#new'
 	end
 
-	resources :users, only: [:index] do
-		resources :articles
-
-	end
+	resources :users, only: [:index]
+	resources :articles
 end
